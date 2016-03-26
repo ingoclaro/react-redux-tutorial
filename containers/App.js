@@ -7,6 +7,8 @@ class App extends Component {
 
   render() {
     let message = 'message from App'
+    let state = this.props.store.getState()
+    message = state.message
 
     return (
       <div>
