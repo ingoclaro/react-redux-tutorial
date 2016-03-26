@@ -1,6 +1,9 @@
 'use strict'
 
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import createLogger from 'redux-logger'
+
+import { CHANGE_MESSAGE } from '../actions'
 
 const reducer = (state, action) => {
   const defaultState = {
@@ -8,16 +11,22 @@ const reducer = (state, action) => {
   }
 
   if (state === undefined) {
-    state = defaultState;
+    state = defaultState
   }
 
-  return state;
+  switch(action.type) {
+    case CHANGE_MESSAGE:
+      return { message: action.message }
+    default:
+      return state
+  }
 }
 
 export default function configureStore(initialState) {
   const store = createStore(
     reducer,
-    initialState
+    initialState,
+    applyMiddleware(createLogger())
   )
 
   return store
