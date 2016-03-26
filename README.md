@@ -5,3 +5,4 @@ The idea is to use that as a starting point and explore different technologies f
 master: vanilla async example, no modifications here.
 
 no-redux: plain react example, no redux
+simple-react-redux: using react-redux to hook the store with react
