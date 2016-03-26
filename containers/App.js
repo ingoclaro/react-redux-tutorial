@@ -1,14 +1,14 @@
 'use strict'
 
 import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
 import Info from '../components/Info'
 
 class App extends Component {
 
   render() {
     let message = 'message from App'
-    let state = this.props.store.getState()
-    message = state.message
+    message = this.props.message
 
     return (
       <div>
@@ -18,4 +18,12 @@ class App extends Component {
   }
 }
 
-export default App
+function mapStateToProps(state) {
+  const { message } = state
+
+  return {
+    message,
+  }
+}
+
+export default connect(mapStateToProps)(App)

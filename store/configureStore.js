@@ -14,9 +14,10 @@ const reducer = (state, action) => {
   return state;
 }
 
-export default function configureStore() {
+export default function configureStore(initialState) {
   const store = createStore(
-    reducer
+    reducer,
+    initialState
   )
 
   return store
