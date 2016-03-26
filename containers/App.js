@@ -2,6 +2,7 @@
 
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { changeMessage } from '../actions'
 import Info from '../components/Info'
 import MessageInput from '../components/MessageInput'
@@ -9,7 +10,7 @@ import MessageInput from '../components/MessageInput'
 class App extends Component {
 
   handleChange(message) {
-    this.props.dispatch(changeMessage(message))
+    this.props.changeMessage(message)
   }
 
   render() {
@@ -33,4 +34,8 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(App)
+function mapDispatchToProps(dispatch) {
+  return { changeMessage: bindActionCreators(changeMessage, dispatch) }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
