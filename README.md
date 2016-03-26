@@ -4,6 +4,6 @@ The idea is to explore different features, to have it simpler to browse I create
 different branches for each one:
 
 no-redux: plain react example, no redux  
-add-redux: add a redux store  
-add-react-redux: using react-redux to connect the store with react  
-simple-action: add a simple action  
+[add-redux](https://github.com/ingoclaro/react-redux-tutorial/compare/no-redux...add-redux): add a redux store  
+[add-react-redux](https://github.com/ingoclaro/react-redux-tutorial/compare/add-redux...add-react-redux): using react-redux to connect the store with react  
+[simple-action](https://github.com/ingoclaro/react-redux-tutorial/compare/add-react-redux...simple-action): add a simple action  
