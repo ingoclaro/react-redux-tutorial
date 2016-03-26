@@ -6,7 +6,11 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
 
-const store = configureStore()
+const initialState = {
+  message: 'message from initialState',
+}
+
+const store = configureStore(initialState)
 const rootEl = document.getElementById('root')
 
 let render = () => {
