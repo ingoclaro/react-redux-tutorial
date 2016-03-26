@@ -3,9 +3,6 @@ based on work from [redux async example](https://github.com/reactjs/redux/tree/n
 The idea is to explore different features, to have it simpler to browse I created
 different branches for each one:
 
-master: vanilla async example, no modifications here.  
-
-
 no-redux: plain react example, no redux  
 add-redux: add a redux store  
 add-react-redux: using react-redux to connect the store with react  
